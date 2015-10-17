@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author Brizola
+ * @author Luiz Henrique Sieber
  */
 public class UnidadeFederal {
      private String descricao;

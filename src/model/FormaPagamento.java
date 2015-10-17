@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author Brizola
+ * @author Luiz Henrique Sieber
  */
 public class FormaPagamento {
     private String descricao;
