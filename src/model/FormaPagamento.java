@@ -12,6 +12,10 @@ package model;
 public class FormaPagamento {
     private String descricao;
 
+    public FormaPagamento(String descricao) {
+        this.descricao = descricao;
+    }
+
     public String getDescricao() {
         return descricao;
     }

@@ -12,6 +12,12 @@ package model;
 public class UnidadeFederal {
      private String descricao;
 
+    public UnidadeFederal(String descricao) {
+        this.descricao = descricao;
+    }
+     
+     
+
     public String getDescricao() {
         return descricao;
     }

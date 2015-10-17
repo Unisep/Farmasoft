@@ -11,6 +11,19 @@ public class Fornecedores {
     private String nomefornecedor,representante, tipo, endereco, bairro,cidade,incricaoestadual, email, observacao;
     private int telefone,telefone2,idproduto,iduf,fax, CEP,CNPJ;
 
+    public Fornecedores(String nomefornecedor, String endereco, String bairro, String cidade, int telefone, int telefone2, int CEP, int CNPJ) {
+        this.nomefornecedor = nomefornecedor;
+        this.endereco = endereco;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.telefone = telefone;
+        this.telefone2 = telefone2;
+        this.CEP = CEP;
+        this.CNPJ = CNPJ;
+    }
+    
+    
+
     public String getNomefornecedor() {
         return nomefornecedor;
     }
