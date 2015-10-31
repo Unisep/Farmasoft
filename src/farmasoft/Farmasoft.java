@@ -3,6 +3,8 @@
  */
 package farmasoft;
 
+import controller.ClienteController;
+
 /**
  *
  * @author luizcarraro
@@ -14,5 +16,11 @@ public class Farmasoft {
      */
     public static void main(String[] args) {
         System.out.println("Hello World");
+        
+        ClienteController cc = new ClienteController();
+        
+        cc.criarClienteTeste();
+        cc.listarClientesTeste();
+        cc.buscarClienteTeste();
     } 
 }

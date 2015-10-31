@@ -28,6 +28,10 @@ public class Cliente {
         this.CPF = CPF;
         this.rg = rg;
     }
+    
+    public Cliente(){
+        
+    }
 
     public String getNome() {
         return nome;
@@ -100,4 +104,11 @@ public class Cliente {
     public void setCep(String cep) {
         this.cep = cep;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "nome=" + nome + ", idade=" + idade + ", CPF=" + CPF + ", rg=" + rg + ", telefone=" + telefone + ", rua=" + rua + ", numero=" + numero + ", cidade=" + cidade + ", cep=" + cep + '}';
+    }
+    
+    
 }
