@@ -70,9 +70,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="panel3" alignment="1" pref="0" max="32767" attributes="0"/>
+                      <Component id="panel3" alignment="1" max="32767" attributes="0"/>
                       <Component id="panel2" alignment="1" max="32767" attributes="0"/>
-                      <Component id="panel1" pref="0" max="32767" attributes="0"/>
+                      <Component id="panel1" max="32767" attributes="0"/>
                       <Component id="panel4" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -112,12 +112,18 @@
             <Property name="text" type="java.lang.String" value="Cancelar"/>
             <Property name="name" type="java.lang.String" value="btnCancelar" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="btnGravar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Gravar"/>
             <Property name="name" type="java.lang.String" value="btnGravar" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGravarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="btnAlterar">
           <Properties>
@@ -136,6 +142,9 @@
             <Property name="text" type="java.lang.String" value="Pesquisar"/>
             <Property name="name" type="java.lang.String" value="btnPesquisar" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPesquisarActionPerformed"/>
+          </Events>
         </Component>
         <Container class="java.awt.Panel" name="panel1">
           <Properties>
@@ -151,7 +160,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField1" alignment="0" min="-2" pref="385" max="-2" attributes="0"/>
+                          <Component id="nomeTextField" alignment="0" min="-2" pref="385" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -172,7 +181,7 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="textField1" min="-2" max="-2" attributes="0"/>
+                          <Component id="nomeTextField" min="-2" max="-2" attributes="0"/>
                           <Component id="textField2" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
@@ -186,11 +195,13 @@
                 <Property name="text" type="java.lang.String" value="Nome:"/>
               </Properties>
             </Component>
-            <Component class="java.awt.TextField" name="textField1">
+            <Component class="java.awt.TextField" name="nomeTextField">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtNome" noResource="true"/>
-                <Property name="text" type="java.lang.String" value="textField1"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeTextFieldActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
@@ -200,7 +211,6 @@
             <Component class="java.awt.TextField" name="textField2">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtData" noResource="true"/>
-                <Property name="text" type="java.lang.String" value="textField2"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -227,7 +237,7 @@
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <Component id="textField3" min="-2" pref="174" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <Component id="textField5" min="-2" pref="145" max="-2" attributes="0"/>
@@ -289,7 +299,6 @@
             <Component class="java.awt.TextField" name="textField3">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtEndereco" noResource="true"/>
-                <Property name="text" type="java.lang.String" value="textField1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
@@ -300,13 +309,11 @@
             <Component class="java.awt.TextField" name="textField4">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtCep" noResource="true"/>
-                <Property name="text" type="java.lang.String" value="textField2"/>
               </Properties>
             </Component>
             <Component class="java.awt.TextField" name="textField5">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtCidade" noResource="true"/>
-                <Property name="text" type="java.lang.String" value="textField1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
@@ -317,7 +324,6 @@
             <Component class="java.awt.TextField" name="textField6">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtuf" noResource="true"/>
-                <Property name="text" type="java.lang.String" value="textField2"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
@@ -341,7 +347,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField7" min="-2" pref="123" max="-2" attributes="0"/>
+                          <Component id="cpfTextField" min="-2" pref="123" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -374,7 +380,7 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="textField7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cpfTextField" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="textField8" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -390,10 +396,9 @@
                 <Property name="text" type="java.lang.String" value="CPF(Respons&#xe1;vel)"/>
               </Properties>
             </Component>
-            <Component class="java.awt.TextField" name="textField7">
+            <Component class="java.awt.TextField" name="cpfTextField">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtcpf" noResource="true"/>
-                <Property name="text" type="java.lang.String" value="textField1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel8">
@@ -404,13 +409,11 @@
             <Component class="java.awt.TextField" name="textField8">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtemail" noResource="true"/>
-                <Property name="text" type="java.lang.String" value="textField2"/>
               </Properties>
             </Component>
             <Component class="java.awt.TextField" name="textField9">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtfone" noResource="true"/>
-                <Property name="text" type="java.lang.String" value="textField1"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel9">
@@ -464,7 +467,6 @@
             <Component class="java.awt.TextField" name="textField10">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtobservacao" noResource="true"/>
-                <Property name="text" type="java.lang.String" value="textField1"/>
               </Properties>
             </Component>
           </SubComponents>
