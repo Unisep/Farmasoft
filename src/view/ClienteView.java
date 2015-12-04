@@ -43,27 +43,31 @@ public class ClienteView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         nomeTextField = new java.awt.TextField();
         jLabel2 = new javax.swing.JLabel();
-        textField2 = new java.awt.TextField();
+        datatextField = new java.awt.TextField();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        idadeTextField = new java.awt.TextField();
+        rgTextField = new java.awt.TextField();
         btnNovo = new javax.swing.JToggleButton();
         panel2 = new java.awt.Panel();
         jLabel3 = new javax.swing.JLabel();
-        textField3 = new java.awt.TextField();
+        ruatextField = new java.awt.TextField();
         jLabel4 = new javax.swing.JLabel();
-        textField4 = new java.awt.TextField();
-        textField5 = new java.awt.TextField();
+        ceptextField = new java.awt.TextField();
+        cidadetextField = new java.awt.TextField();
         jLabel5 = new javax.swing.JLabel();
-        textField6 = new java.awt.TextField();
+        uftextField = new java.awt.TextField();
         jLabel6 = new javax.swing.JLabel();
         panel3 = new java.awt.Panel();
         jLabel7 = new javax.swing.JLabel();
         cpfTextField = new java.awt.TextField();
         jLabel8 = new javax.swing.JLabel();
-        textField8 = new java.awt.TextField();
-        textField9 = new java.awt.TextField();
+        emailtextField = new java.awt.TextField();
+        telefonetextField = new java.awt.TextField();
         jLabel9 = new javax.swing.JLabel();
         panel4 = new java.awt.Panel();
         jLabel10 = new javax.swing.JLabel();
-        textField10 = new java.awt.TextField();
+        obstextField = new java.awt.TextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -91,6 +95,11 @@ public class ClienteView extends javax.swing.JFrame {
 
         btnExcluir.setText("Excluir");
         btnExcluir.setName("btnExcluir"); // NOI18N
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         btnPesquisar.setText("Pesquisar");
         btnPesquisar.setName("btnPesquisar"); // NOI18N
@@ -105,15 +114,18 @@ public class ClienteView extends javax.swing.JFrame {
         jLabel1.setText("Nome:");
 
         nomeTextField.setName("edtNome"); // NOI18N
-        nomeTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeTextFieldActionPerformed(evt);
-            }
-        });
 
         jLabel2.setText("Data:");
 
-        textField2.setName("edtData"); // NOI18N
+        datatextField.setName("edtData"); // NOI18N
+
+        jLabel11.setText("Idade");
+
+        jLabel12.setText("RG");
+
+        idadeTextField.setName("edtidade"); // NOI18N
+
+        rgTextField.setName("edtrg"); // NOI18N
 
         javax.swing.GroupLayout panel1Layout = new javax.swing.GroupLayout(panel1);
         panel1.setLayout(panel1Layout);
@@ -123,12 +135,20 @@ public class ClienteView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(idadeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12)
+                    .addComponent(rgTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47))
+                    .addComponent(datatextField, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,12 +156,16 @@ public class ClienteView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nomeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(datatextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idadeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rgTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         btnNovo.setText("Novo");
@@ -151,17 +175,17 @@ public class ClienteView extends javax.swing.JFrame {
 
         jLabel3.setText("Endereço:");
 
-        textField3.setName("edtEndereco"); // NOI18N
+        ruatextField.setName("edtEndereco"); // NOI18N
 
         jLabel4.setText("CEP:");
 
-        textField4.setName("edtCep"); // NOI18N
+        ceptextField.setName("edtCep"); // NOI18N
 
-        textField5.setName("edtCidade"); // NOI18N
+        cidadetextField.setName("edtCidade"); // NOI18N
 
         jLabel5.setText("Cidade:");
 
-        textField6.setName("edtuf"); // NOI18N
+        uftextField.setName("edtuf"); // NOI18N
 
         jLabel6.setText("UF:");
 
@@ -173,19 +197,19 @@ public class ClienteView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(textField3, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ruatextField, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
-                    .addComponent(textField5, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cidadetextField, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(textField4, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ceptextField, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
-                    .addComponent(textField6, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(uftextField, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19))
         );
         panel2Layout.setVerticalGroup(
@@ -196,20 +220,20 @@ public class ClienteView extends javax.swing.JFrame {
                     .addGroup(panel2Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(textField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(uftextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(panel2Layout.createSequentialGroup()
                             .addComponent(jLabel5)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(textField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cidadetextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(panel2Layout.createSequentialGroup()
                             .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel3)
                                 .addComponent(jLabel4))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(textField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(ruatextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ceptextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -221,9 +245,14 @@ public class ClienteView extends javax.swing.JFrame {
 
         jLabel8.setText("E-mail:");
 
-        textField8.setName("edtemail"); // NOI18N
+        emailtextField.setName("edtemail"); // NOI18N
+        emailtextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailtextFieldActionPerformed(evt);
+            }
+        });
 
-        textField9.setName("edtfone"); // NOI18N
+        telefonetextField.setName("edtfone"); // NOI18N
 
         jLabel9.setText("Fone:");
 
@@ -239,11 +268,11 @@ public class ClienteView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(textField9, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(telefonetextField, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
-                    .addComponent(textField8, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(emailtextField, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         panel3Layout.setVerticalGroup(
@@ -254,7 +283,7 @@ public class ClienteView extends javax.swing.JFrame {
                     .addGroup(panel3Layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(textField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(telefonetextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel3Layout.createSequentialGroup()
                         .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
@@ -262,7 +291,7 @@ public class ClienteView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(cpfTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(emailtextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -270,7 +299,7 @@ public class ClienteView extends javax.swing.JFrame {
 
         jLabel10.setText("Observações Gerais");
 
-        textField10.setName("edtobservacao"); // NOI18N
+        obstextField.setName("edtobservacao"); // NOI18N
 
         javax.swing.GroupLayout panel4Layout = new javax.swing.GroupLayout(panel4);
         panel4.setLayout(panel4Layout);
@@ -279,7 +308,7 @@ public class ClienteView extends javax.swing.JFrame {
             .addGroup(panel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textField10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(obstextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panel4Layout.createSequentialGroup()
                         .addComponent(jLabel10)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -291,7 +320,7 @@ public class ClienteView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textField10, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+                .addComponent(obstextField, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -363,10 +392,6 @@ public class ClienteView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void nomeTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeTextFieldActionPerformed
-
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         // TODO add your handling code here:
         this.dispose();
@@ -375,11 +400,22 @@ public class ClienteView extends javax.swing.JFrame {
     private void btnGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGravarActionPerformed
         // TODO add your handling code here:
         String nome = nomeTextField.getText();
-        int idade = 10;
+        int idade = Integer.parseInt(idadeTextField.getText());
         String cpf = cpfTextField.getText();
-        String rg = "1234567";
+        String rg = rgTextField.getText();
+        String obs = obstextField.getText();
+        String data = datatextField.getText();
+        String rua = ruatextField.getText();
+        String cep = ceptextField.getText();
+        String cidade = cidadetextField.getText();
+        String uf = uftextField.getText();
+        String email = emailtextField.getText();
+        String telefone = telefonetextField.getText();
         
-        boolean sucesso = controller.gravarCliente(nome, idade, cpf, rg);
+        boolean sucesso = controller.criarClienteTeste(nome, idade, cpf, rg, cep,cidade, rua, telefone, email, data, uf, obs);
+        
+        //controller.criarClienteTeste(nome,idade,cpf,rg, cep,cidade, rua, telefone, email, data, uf, obs);
+        //JOptionPane.showMessageDialog(null, "Cliente gravado com sucesso!");
         
         if(sucesso) {
             JOptionPane.showMessageDialog(null, "Cliente gravado com sucesso!");
@@ -390,12 +426,48 @@ public class ClienteView extends javax.swing.JFrame {
                     "Erro", 
                     JOptionPane.ERROR_MESSAGE);
         }
+        
+        nomeTextField.setText("");
+        rgTextField.setText("");
+        obstextField.setText("");
+        datatextField.setText("");
+        ruatextField.setText("");
+        ceptextField.setText("");
+        cidadetextField.setText("");
+        uftextField.setText("");
+        emailtextField.setText("");
+        telefonetextField.setText("");
+        cpfTextField.setText("");
+        idadeTextField.setText("");
     }//GEN-LAST:event_btnGravarActionPerformed
 
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
         // TODO add your handling code here:
-        controller.listarClientesTeste();
+        controller.buscarClienteTeste();
     }//GEN-LAST:event_btnPesquisarActionPerformed
+
+    private void emailtextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailtextFieldActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        // TODO add your handling code here:
+         String nome = nomeTextField.getText();
+        int idade = Integer.parseInt(idadeTextField.getText());
+        String cpf = cpfTextField.getText();
+        String rg = rgTextField.getText();
+        String obs = obstextField.getText();
+        String data = datatextField.getText();
+        String rua = ruatextField.getText();
+        String cep = ceptextField.getText();
+        String cidade = cidadetextField.getText();
+        String uf = uftextField.getText();
+        String email = emailtextField.getText();
+        String telefone = telefonetextField.getText();
+        
+        controller.Excluir(nome, idade, cpf, rg, cep,cidade, rua, telefone, email, data, uf, obs);
+        JOptionPane.showMessageDialog(null, "Cliente excluido com sucesso!");
+    }//GEN-LAST:event_btnExcluirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -439,9 +511,16 @@ public class ClienteView extends javax.swing.JFrame {
     private javax.swing.JToggleButton btnGravar;
     private javax.swing.JToggleButton btnNovo;
     private javax.swing.JToggleButton btnPesquisar;
+    private java.awt.TextField ceptextField;
+    private java.awt.TextField cidadetextField;
     private java.awt.TextField cpfTextField;
+    private java.awt.TextField datatextField;
+    private java.awt.TextField emailtextField;
+    private java.awt.TextField idadeTextField;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -452,17 +531,14 @@ public class ClienteView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private java.awt.TextField nomeTextField;
+    private java.awt.TextField obstextField;
     private java.awt.Panel panel1;
     private java.awt.Panel panel2;
     private java.awt.Panel panel3;
     private java.awt.Panel panel4;
-    private java.awt.TextField textField10;
-    private java.awt.TextField textField2;
-    private java.awt.TextField textField3;
-    private java.awt.TextField textField4;
-    private java.awt.TextField textField5;
-    private java.awt.TextField textField6;
-    private java.awt.TextField textField8;
-    private java.awt.TextField textField9;
+    private java.awt.TextField rgTextField;
+    private java.awt.TextField ruatextField;
+    private java.awt.TextField telefonetextField;
+    private java.awt.TextField uftextField;
     // End of variables declaration//GEN-END:variables
 }

@@ -136,6 +136,9 @@
             <Property name="text" type="java.lang.String" value="Excluir"/>
             <Property name="name" type="java.lang.String" value="btnExcluir" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnExcluirActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="btnPesquisar">
           <Properties>
@@ -160,14 +163,24 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="nomeTextField" alignment="0" min="-2" pref="385" max="-2" attributes="0"/>
+                          <Component id="nomeTextField" alignment="0" min="-2" pref="195" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jLabel11" max="32767" attributes="0"/>
+                          <Component id="idadeTextField" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                          <Component id="rgTextField" min="-2" pref="118" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField2" min="-2" pref="68" max="-2" attributes="0"/>
+                          <Component id="datatextField" min="-2" pref="68" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -178,13 +191,17 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="nomeTextField" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField2" min="-2" max="-2" attributes="0"/>
+                          <Component id="datatextField" min="-2" max="-2" attributes="0"/>
+                          <Component id="idadeTextField" min="-2" max="-2" attributes="0"/>
+                          <Component id="rgTextField" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="11" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -199,18 +216,38 @@
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtNome" noResource="true"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeTextFieldActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Data:"/>
               </Properties>
             </Component>
-            <Component class="java.awt.TextField" name="textField2">
+            <Component class="java.awt.TextField" name="datatextField">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtData" noResource="true"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel11">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Idade"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel12">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="RG"/>
+              </Properties>
+            </Component>
+            <Component class="java.awt.TextField" name="idadeTextField">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="edtidade" noResource="true"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="ClienteView_idadeTextField"/>
+              </AuxValues>
+            </Component>
+            <Component class="java.awt.TextField" name="rgTextField">
+              <Properties>
+                <Property name="name" type="java.lang.String" value="edtrg" noResource="true"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -235,22 +272,22 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField3" min="-2" pref="174" max="-2" attributes="0"/>
+                          <Component id="ruatextField" min="-2" pref="174" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField5" min="-2" pref="145" max="-2" attributes="0"/>
+                          <Component id="cidadetextField" min="-2" pref="145" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField4" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
+                          <Component id="ceptextField" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField6" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
+                          <Component id="uftextField" alignment="0" min="-2" pref="68" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                   </Group>
@@ -264,13 +301,13 @@
                           <Group type="102" attributes="0">
                               <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="textField6" min="-2" max="-2" attributes="0"/>
+                              <Component id="uftextField" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="textField5" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cidadetextField" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -279,8 +316,8 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="textField3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="textField4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ruatextField" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ceptextField" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -296,7 +333,7 @@
                 <Property name="text" type="java.lang.String" value="Endere&#xe7;o:"/>
               </Properties>
             </Component>
-            <Component class="java.awt.TextField" name="textField3">
+            <Component class="java.awt.TextField" name="ruatextField">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtEndereco" noResource="true"/>
               </Properties>
@@ -306,12 +343,12 @@
                 <Property name="text" type="java.lang.String" value="CEP:"/>
               </Properties>
             </Component>
-            <Component class="java.awt.TextField" name="textField4">
+            <Component class="java.awt.TextField" name="ceptextField">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtCep" noResource="true"/>
               </Properties>
             </Component>
-            <Component class="java.awt.TextField" name="textField5">
+            <Component class="java.awt.TextField" name="cidadetextField">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtCidade" noResource="true"/>
               </Properties>
@@ -321,7 +358,7 @@
                 <Property name="text" type="java.lang.String" value="Cidade:"/>
               </Properties>
             </Component>
-            <Component class="java.awt.TextField" name="textField6">
+            <Component class="java.awt.TextField" name="uftextField">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtuf" noResource="true"/>
               </Properties>
@@ -352,12 +389,12 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField9" min="-2" pref="111" max="-2" attributes="0"/>
+                          <Component id="telefonetextField" min="-2" pref="111" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="23" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                          <Component id="textField8" min="-2" pref="244" max="-2" attributes="0"/>
+                          <Component id="emailtextField" min="-2" pref="244" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -371,7 +408,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="textField9" min="-2" max="-2" attributes="0"/>
+                              <Component id="telefonetextField" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -381,7 +418,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="cpfTextField" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="textField8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="emailtextField" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -406,12 +443,15 @@
                 <Property name="text" type="java.lang.String" value="E-mail:"/>
               </Properties>
             </Component>
-            <Component class="java.awt.TextField" name="textField8">
+            <Component class="java.awt.TextField" name="emailtextField">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtemail" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailtextFieldActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="java.awt.TextField" name="textField9">
+            <Component class="java.awt.TextField" name="telefonetextField">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtfone" noResource="true"/>
               </Properties>
@@ -436,7 +476,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="textField10" max="32767" attributes="0"/>
+                          <Component id="obstextField" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -452,7 +492,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="textField10" pref="63" max="32767" attributes="0"/>
+                      <Component id="obstextField" pref="63" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -464,7 +504,7 @@
                 <Property name="text" type="java.lang.String" value="Observa&#xe7;&#xf5;es Gerais"/>
               </Properties>
             </Component>
-            <Component class="java.awt.TextField" name="textField10">
+            <Component class="java.awt.TextField" name="obstextField">
               <Properties>
                 <Property name="name" type="java.lang.String" value="edtobservacao" noResource="true"/>
               </Properties>

@@ -13,12 +13,13 @@ import model.Cliente;
  * @author luizcarraro
  */
 public class ClienteController {
-    public void criarClienteTeste() {
+    public boolean criarClienteTeste(String nome, int idade, String cpf, String rg,String cep, String cidade, String rua, String telefone, String email, String data, String uf, String obs) {
         DAOController db = DAOController.getInstance();
         
-        Cliente cliente = new Cliente("Luiz", 25, "0101202020", "123123");
+        Cliente cliente = new Cliente(nome,idade,cpf,rg,cep, cidade, rua, telefone, email, data, uf, obs);
         
         db.gravar(cliente);
+        return true; 
     }
     
     public void listarClientesTeste() {
@@ -37,16 +38,27 @@ public class ClienteController {
         DAOController db = DAOController.getInstance();
         
         //Para buscar por um dado específico, como por exemplo, o nome: 
-        String nome = "Luiz";
+        String nome = "Juca";
         
         Cliente busca = new Cliente();
         busca.setNome(nome);
         
         List<Object> resultado = db.buscar(busca);
         
-        System.out.print("\n\n\nBusca por nome: \n");
-        for (Object cliente : resultado) {
-            System.out.println(cliente.toString());
-        }
+       
+       // System.out.print("\n\n\nBusca por nome: \n");
+        //for (Object cliente : resultado) {
+           // System.out.println(cliente.toString());
+        //}
+    }   
+    
+    public void Excluir(String nome, int idade, String cpf, String rg,String cep, String cidade, String rua, String telefone, String email, String data, String uf, String obs) {
+        DAOController db = DAOController.getInstance();
+        
+        Cliente cliente = new Cliente(nome,idade,cpf,rg,cep, cidade, rua, telefone, email, data, uf, obs);
+        
+        db.apagar(cliente);
+
     }
+    
 }
