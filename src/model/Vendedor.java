@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class Vendedor {
     private String nome;
-    private Date datacontratacao;
+    private String datacontratacao;
     private String CPF;
     private String rg;
     private String endereco;
@@ -19,15 +19,25 @@ public class Vendedor {
     private String bairro;
     private String cep;
     private String uf;
-    private String numero;
     private String telefone;
     private String email;
 
-    public Vendedor(String nome, Date datacontratacao, String CPF, String rg) {
+    public Vendedor(String nome, String datacontratacao, String CPF, String rg, String endereco, String cidade, String bairro, String cep, String uf, String telefone, String email) {
         this.nome = nome;
         this.datacontratacao = datacontratacao;
         this.CPF = CPF;
         this.rg = rg;
+        this.endereco = endereco;
+        this.cidade = cidade;
+        this.bairro = bairro;
+        this.cep = cep;
+        this.uf = uf;
+        this.telefone = telefone;
+        this.email = email;
+    }
+
+    public Vendedor() {
+       
     }
 
     public String getNome() {
@@ -38,11 +48,11 @@ public class Vendedor {
         this.nome = nome;
     }
 
-    public Date getDatacontratacao() {
+    public String getDatacontratacao() {
         return datacontratacao;
     }
 
-    public void setDatacontratacao(Date datacontratacao) {
+    public void setDatacontratacao(String datacontratacao) {
         this.datacontratacao = datacontratacao;
     }
 
@@ -102,14 +112,6 @@ public class Vendedor {
         this.uf = uf;
     }
 
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
     public String getTelefone() {
         return telefone;
     }
@@ -125,4 +127,11 @@ public class Vendedor {
     public void setEmail(String email) {
         this.email = email;
     }    
+
+    @Override
+    public String toString() {
+        return "Vendedor{" + "nome=" + nome + ", datacontratacao=" + datacontratacao + ", CPF=" + CPF + ", rg=" + rg + ", endereco=" + endereco + ", cidade=" + cidade + ", bairro=" + bairro + ", cep=" + cep + ", uf=" + uf + ", telefone=" + telefone + ", email=" + email + '}';
+    }
+    
+    
 }

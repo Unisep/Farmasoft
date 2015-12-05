@@ -31,6 +31,7 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        Vendedor = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,6 +44,14 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem1);
+
+        Vendedor.setLabel("Vendedor");
+        Vendedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VendedorActionPerformed(evt);
+            }
+        });
+        jMenu1.add(Vendedor);
 
         jMenuBar1.add(jMenu1);
 
@@ -66,6 +75,11 @@ public class Principal extends javax.swing.JFrame {
         ClienteView tela = new ClienteView();
         tela.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void VendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VendedorActionPerformed
+        VendedorView tela = new VendedorView();
+        tela.setVisible(true);
+    }//GEN-LAST:event_VendedorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,6 +117,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Vendedor;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;

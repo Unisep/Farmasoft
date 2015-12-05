@@ -46,10 +46,10 @@ public class ClienteController {
         List<Object> resultado = db.buscar(busca);
         
        
-       // System.out.print("\n\n\nBusca por nome: \n");
-        //for (Object cliente : resultado) {
-           // System.out.println(cliente.toString());
-        //}
+        System.out.print("\n\n\nBusca por nome: \n");
+        for (Object cliente : resultado) {
+           System.out.println(cliente.toString());
+        }
     }   
     
     public void Excluir(String nome, int idade, String cpf, String rg,String cep, String cidade, String rua, String telefone, String email, String data, String uf, String obs) {
